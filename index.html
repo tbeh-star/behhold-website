@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>behHold</title>
+  <meta name="description" content="behHold — m3ndel.com und distrobrief.com">
+  <meta property="og:title" content="behHold">
+  <meta property="og:description" content="Portfolio: m3ndel.com und distrobrief.com">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://behhold.de">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://behhold.de">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: #f9f8f3;
+      color: #021f3d;
+      min-height: 100vh;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .identity {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .company-name {
+      font-size: 2.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+
+    .subtitle {
+      font-size: 0.75rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #7e8c98;
+      margin-top: 0.75rem;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: #c8c7c2;
+      margin: 2.5rem auto 0;
+    }
+
+    .projects {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      padding: 2rem;
+      border: 1px solid #e8e7e2;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #7e8c98;
+      background-color: #ffffff;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-name {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .card-domain {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: #7e8c98;
+    }
+
+    .card-description {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #7e8c98;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .card-arrow {
+      align-self: flex-end;
+      font-size: 1.25rem;
+      color: #7e8c98;
+      margin-top: 1.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover .card-arrow {
+      transform: translateX(4px);
+      color: #021f3d;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.7rem;
+      color: #7e8c98;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #7e8c98;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: #021f3d;
+    }
+
+    .footer-sep {
+      margin: 0 0.5rem;
+    }
+
+    @media (max-width: 700px) {
+      .projects {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .company-name {
+        font-size: 2rem;
+      }
+
+      .identity {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="identity">
+      <h1 class="company-name">behHold</h1>
+      <div class="divider"></div>
+    </header>
+
+    <section class="projects">
+      <a href="https://m3ndel.com" target="_blank" rel="noopener" class="card">
+        <div class="card-header">
+          <span class="card-name">m3ndel</span>
+          <span class="card-domain">.com</span>
+        </div>
+        <p class="card-description">AI-powered data extraction for chemical distribution</p>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+
+      <a href="https://distrobrief.com" target="_blank" rel="noopener" class="card">
+        <div class="card-header">
+          <span class="card-name">distrobrief</span>
+          <span class="card-domain">.com</span>
+        </div>
+        <p class="card-description">Intelligence for chemical distribution</p>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <span>&copy; 2025 behHold</span>
+      <span class="footer-sep">&middot;</span>
+      <a href="impressum.html">Impressum</a>
+    </footer>
+  </main>
+</body>
+</html>
