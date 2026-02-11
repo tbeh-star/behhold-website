@@ -81,7 +81,7 @@
     .card {
       display: flex;
       flex-direction: column;
-      width: 280px;
+      width: 320px;
       padding: 2rem;
       border: 1px solid #e8e7e2;
       border-radius: 8px;
@@ -153,6 +153,100 @@
       vertical-align: middle;
     }
 
+    /* NTRDE Hero Card */
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #c8c7c2;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-card {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      border: 1px solid #e8e7e2;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .hero-card:hover {
+      border-color: #7e8c98;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+
+    .hero-card-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #f0f0ee;
+    }
+
+    .hero-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-card-body {
+      padding: 1.5rem 2rem 2rem;
+    }
+
+    .hero-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .hero-card-domain {
+      font-size: 0.875rem;
+      color: #7e8c98;
+      font-weight: 400;
+    }
+
+    .hero-card-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      color: #021f3d;
+    }
+
+    .hero-card-desc {
+      font-size: 0.875rem;
+      color: #7e8c98;
+      line-height: 1.5;
+    }
+
+    .hero-card-arrow {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: #7e8c98;
+      transition: transform 0.2s ease;
+    }
+
+    .hero-card:hover .hero-card-arrow {
+      transform: translateX(4px);
+      color: #021f3d;
+    }
+
     .footer {
       margin-top: 4rem;
       font-size: 0.7rem;
@@ -182,6 +276,14 @@
 
       .card {
         width: 100%;
+      }
+
+      .hero-card {
+        max-width: 100%;
+      }
+
+      .hero-card-tagline {
+        font-size: 1.25rem;
       }
 
       .company-name {
@@ -222,16 +324,24 @@
         <span class="card-arrow">&rarr;</span>
       </a>
 
-      <a href="postmortem/" class="card">
-        <p class="card-title">NTRDE <span class="card-badge">Archived</span></p>
-        <div class="card-header">
-          <span class="card-name">ntrde</span>
-          <span class="card-domain">.io</span>
-        </div>
-        <p class="card-description">Decision intelligence for chemical distribution</p>
-        <span class="card-arrow">&rarr;</span>
-      </a>
     </section>
+
+    <p class="section-label">Post Mortem</p>
+
+    <a href="postmortem/" class="hero-card">
+      <div class="hero-card-image">
+        <img src="postmortem/assets/hero-dashboard.jpg" alt="NTRDE Dashboard">
+      </div>
+      <div class="hero-card-body">
+        <div class="hero-card-top">
+          <span class="hero-card-title">NTRDE <span class="card-badge">Archived</span></span>
+          <span class="hero-card-domain">ntrde.io</span>
+        </div>
+        <p class="hero-card-tagline">Decide. Better.</p>
+        <p class="hero-card-desc">Decision Intelligence for chemical companies to leverage commercial operations.</p>
+        <div class="hero-card-arrow">&rarr;</div>
+      </div>
+    </a>
 
     <footer class="footer">
       <span>&copy; 2025 behHold</span>
