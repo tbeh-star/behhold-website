@@ -74,12 +74,14 @@
     .projects {
       display: flex;
       gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .card {
       display: flex;
       flex-direction: column;
-      width: 320px;
+      width: 280px;
       padding: 2rem;
       border: 1px solid #e8e7e2;
       border-radius: 8px;
@@ -136,6 +138,19 @@
     .card:hover .card-arrow {
       transform: translateX(4px);
       color: #021f3d;
+    }
+
+    .card-badge {
+      font-size: 0.625rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: #e8e7e2;
+      color: #7e8c98;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
     }
 
     .footer {
@@ -204,6 +219,16 @@
           <span class="card-domain">.com</span>
         </div>
         <p class="card-description">Intelligence for chemical distribution</p>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+
+      <a href="postmortem/" class="card">
+        <p class="card-title">NTRDE <span class="card-badge">Archived</span></p>
+        <div class="card-header">
+          <span class="card-name">ntrde</span>
+          <span class="card-domain">.io</span>
+        </div>
+        <p class="card-description">Decision intelligence for chemical distribution</p>
         <span class="card-arrow">&rarr;</span>
       </a>
     </section>

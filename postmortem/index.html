@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTRDE - Decide. Better. (Archived)</title>
+  <meta name="description" content="Decision Intelligence for chemical companies to leverage commercial operations. Archived project by behHold.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue: #0072E5;
+      --blue-hover: #005bb5;
+      --dark: #0a0a0a;
+      --gray-50: #f9f9f9;
+      --gray-100: #f0f0f0;
+      --gray-200: #e0e0e0;
+      --gray-400: #999;
+      --gray-500: #777;
+      --gray-600: #555;
+      --gray-800: #222;
+      --radius: 12px;
+      --max-w: 1200px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--dark);
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Archive banner */
+    .archive-banner {
+      background: var(--gray-800);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+    .archive-banner a { color: var(--blue); text-decoration: none; }
+    .archive-banner a:hover { text-decoration: underline; }
+
+    /* Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 40px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--dark);
+    }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-logo span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-600);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--dark); }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .btn-ghost {
+      font-size: 14px;
+      color: var(--gray-600);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--blue-hover); }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 40px 60px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(48px, 7vw, 80px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: var(--gray-500);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.5;
+    }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 60px;
+    }
+    .btn-outline {
+      border: 1px solid var(--gray-200);
+      color: var(--dark);
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gray-400); }
+    .hero-image {
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+      border: 1px solid var(--gray-200);
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Section base */
+    .section {
+      padding: 80px 40px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+    .section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section h3 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+
+    /* Why NTRDE */
+    .why {
+      padding: 80px 40px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .why-intro {
+      font-size: 20px;
+      line-height: 1.5;
+      color: var(--gray-600);
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .why-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .why-card .subtitle {
+      font-size: 16px;
+      color: var(--gray-500);
+      margin-bottom: 12px;
+    }
+    .why-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* Banner */
+    .banner {
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      padding: 60px 40px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    /* Solution */
+    .solution {
+      padding: 80px 40px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .solution-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 48px;
+    }
+    .solution-text p {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .solution-features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .solution-feature {
+      font-size: 15px;
+      color: var(--gray-600);
+      padding-left: 20px;
+      border-left: 2px solid var(--blue);
+      line-height: 1.5;
+    }
+    .solution-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    }
+    .solution-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Features grid */
+    .features {
+      padding: 0 40px 80px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .feature-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16/10;
+    }
+    .feature-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* CTA */
+    .cta {
+      position: relative;
+      padding: 120px 40px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .cta-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+    }
+    .cta-content h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 28px;
+      color: #fff;
+    }
+
+    /* Team */
+    .team {
+      padding: 80px 40px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .team h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      margin-bottom: 48px;
+    }
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+    }
+    .team-member {
+      text-align: center;
+    }
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+    .team-member h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .team-member .role {
+      font-size: 14px;
+      color: var(--gray-500);
+      margin-bottom: 8px;
+    }
+    .team-member a { color: var(--dark); }
+
+    /* Careers */
+    .careers {
+      padding: 80px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .careers .label {
+      font-size: 14px;
+      color: var(--gray-500);
+      margin-bottom: 12px;
+    }
+    .careers blockquote {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--gray-200);
+      padding: 60px 40px 40px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.6;
+      max-width: 360px;
+    }
+    .footer-col h5 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+      color: var(--gray-400);
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a {
+      font-size: 14px;
+      color: var(--gray-600);
+      text-decoration: none;
+    }
+    .footer-col a:hover { color: var(--dark); }
+    .footer-partners {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding: 24px 0;
+      border-top: 1px solid var(--gray-100);
+      margin-bottom: 24px;
+    }
+    .footer-partners h5 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gray-400);
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .footer-partners img {
+      height: 28px;
+      width: auto;
+      opacity: 0.4;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--gray-100);
+      font-size: 13px;
+      color: var(--gray-400);
+    }
+    .footer-bottom a {
+      color: var(--gray-400);
+      text-decoration: none;
+      margin-left: 16px;
+    }
+    .footer-bottom a:hover { color: var(--gray-600); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 20px 40px; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .why { padding: 48px 20px; }
+      .why-grid { grid-template-columns: 1fr; gap: 32px; }
+      .solution { padding: 48px 20px; }
+      .solution-top { grid-template-columns: 1fr; gap: 32px; }
+      .features { grid-template-columns: 1fr; padding: 0 20px 48px; }
+      .team { padding: 48px 20px; }
+      .team-grid { flex-direction: column; align-items: center; }
+      .footer-top { grid-template-columns: 1fr; }
+      .section { padding: 48px 20px; }
+      .careers { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Archive notice -->
+  <div class="archive-banner">
+    This is an archived version of the NTRDE website. &mdash; <a href="https://behhold.de">Back to behHold</a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 12.2c0-3.92 0-5.88.763-7.378a7 7 0 0 1 3.06-3.059C6.318 1 8.28 1 12.2 1h9.6c3.92 0 5.88 0 7.378.763a7 7 0 0 1 3.059 3.06C33 6.318 33 8.28 33 12.2v9.6c0 3.92 0 5.88-.763 7.378a7 7 0 0 1-3.06 3.059C27.682 33 25.72 33 21.8 33h-9.6c-3.92 0-5.88 0-7.378-.763a7 7 0 0 1-3.059-3.06C1 27.682 1 25.72 1 21.8v-9.6Z" fill="#fff"/>
+        <path d="M13 26v-8l8 8h-8Zm8-18v8l-8-8h8Z" fill="#000"/>
+        <path d="M21.8.5h-9.623c-1.94 0-3.428 0-4.615.097-1.198.098-2.136.297-2.967.72a7.5 7.5 0 0 0-3.278 3.278c-.423.831-.622 1.769-.72 2.967C.5 8.749.5 10.236.5 12.177v9.646c0 1.94 0 3.428.097 4.615.098 1.199.297 2.136.72 2.967a7.5 7.5 0 0 0 3.278 3.277c.831.424 1.769.623 2.967.721 1.187.097 2.674.097 4.615.097h9.646c1.94 0 3.428 0 4.615-.097 1.199-.098 2.136-.297 2.967-.72a7.5 7.5 0 0 0 3.277-3.278c.424-.831.623-1.768.721-2.967.097-1.187.097-2.674.097-4.615v-9.646c0-1.94 0-3.428-.097-4.615-.098-1.198-.297-2.136-.72-2.967a7.5 7.5 0 0 0-3.278-3.278c-.831-.423-1.768-.622-2.967-.72C25.251.5 23.764.5 21.823.5H21.8Z" stroke="#D5D5DA"/>
+      </svg>
+      <span>NTRDE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#about">About us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#" class="btn-ghost">Login</a>
+      <a href="#" class="btn-primary">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="platform">
+    <h1>Decide. Better.</h1>
+    <p>Decision Intelligence for chemical companies to leverage commercial operations.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">Get in touch</a>
+      <a href="#solution" class="btn-outline">Explore</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero-dashboard.jpg" alt="NTRDE Dashboard" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Why NTRDE -->
+  <section class="why">
+    <h3>Why NTRDE</h3>
+    <p class="why-intro">Reach the next level of commercial intelligence by leveraging proprietary knowledge. Improve corporate performance by augmenting human expertise.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <h4>Enhance.</h4>
+        <div class="subtitle">Unlock knowledge.</div>
+        <p>Create clarity for educated decision-making, instead of gut-feeling. Use market information and insider knowledge to identify business opportunities and create competitive advantage systematically.</p>
+      </div>
+      <div class="why-card">
+        <h4>Optimize.</h4>
+        <div class="subtitle">Unleash human skills.</div>
+        <p>Reallocate resources for everyone involved by eliminating repetitive, error-prone processes. Accelerate data to insights. Use human capabilities to drive value and improve corporate performance.</p>
+      </div>
+      <div class="why-card">
+        <h4>Collaborate.</h4>
+        <div class="subtitle">It's a people's business.</div>
+        <p>Operate faster and more accurately by breaking silos, sharing knowledge, revealing synergies and enabling cross-divisional collaboration. Anticipate the market and grow smarter with every transaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner -->
+  <div class="banner">UnchAIn your expertise.</div>
+
+  <!-- Solution -->
+  <section class="solution" id="solution">
+    <div class="solution-top">
+      <div class="solution-text">
+        <h3>Solution</h3>
+        <p>NTRDE&trade; is the end-to-end decision-making software for chemical companies. Bringing clarity, connectivity and context to commercial teams by docking to established workflows.</p>
+      </div>
+      <div class="solution-features">
+        <div class="solution-feature">Improve your market analysis by reducing time for research with all relevant data in one place.</div>
+        <div class="solution-feature">Sharpen your strategy by anticipating the market using insider knowledge.</div>
+        <div class="solution-feature">Grow your business by revealing synergies and identifying new opportunities.</div>
+      </div>
+    </div>
+    <div class="solution-image">
+      <img src="assets/solution-dashboard.jpg" alt="NTRDE Solution Dashboard" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <div class="features">
+    <div class="feature-card">
+      <img src="assets/feature-1.jpg" alt="NTRDE Feature" loading="lazy">
+    </div>
+    <div class="feature-card">
+      <img src="assets/feature-2.jpg" alt="NTRDE Feature" loading="lazy">
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-bg">
+      <img src="assets/cta-bg.jpg" alt="">
+    </div>
+    <div class="cta-content">
+      <h2>Leverage your knowledge assets.</h2>
+      <a href="#" class="btn-primary">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team" id="about">
+    <h3>Meet the team</h3>
+    <h2>The founders behind.</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/founder-niklas.png" alt="Niklas Gossel">
+        <h4>Niklas Gossel</h4>
+        <div class="role">Co-Founder</div>
+        <a href="https://www.linkedin.com/in/niklas-gossel/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.73 11.473v-.033a.83.83 0 0 1-.021.033h.02Z" fill="#000"/>
+            <path d="M20.855 1.976H3.025c-.854 0-1.546.675-1.546 1.508v18.04c0 .832.692 1.507 1.546 1.507h17.83c.855 0 1.547-.676 1.547-1.508V3.483c0-.832-.692-1.507-1.547-1.507ZM7.821 19.602H4.66v-9.508h3.16v9.508ZM6.24 8.795h-.02c-1.06 0-1.746-.73-1.746-1.642 0-.933.707-1.643 1.788-1.643s1.746.71 1.767 1.643c0 .912-.686 1.642-1.788 1.642Zm12.976 10.807h-3.16v-5.088c0-1.277-.458-2.15-1.601-2.15-.873 0-1.393.589-1.622 1.157-.083.202-.104.486-.104.77v5.31H9.57s.042-8.616 0-9.507h3.16v1.346c.42-.648 1.171-1.57 2.849-1.57 2.079 0 3.638 1.359 3.638 4.28v5.452Z" fill="#000"/>
+          </svg>
+        </a>
+      </div>
+      <div class="team-member">
+        <img src="assets/founder-tao.png" alt="Tao Behrendt">
+        <h4>Tao Behrendt</h4>
+        <div class="role">Co-Founder</div>
+        <a href="https://www.linkedin.com/in/tao-behrendt/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.73 11.473v-.033a.83.83 0 0 1-.021.033h.02Z" fill="#000"/>
+            <path d="M20.855 1.976H3.025c-.854 0-1.546.675-1.546 1.508v18.04c0 .832.692 1.507 1.546 1.507h17.83c.855 0 1.547-.676 1.547-1.508V3.483c0-.832-.692-1.507-1.547-1.507ZM7.821 19.602H4.66v-9.508h3.16v9.508ZM6.24 8.795h-.02c-1.06 0-1.746-.73-1.746-1.642 0-.933.707-1.643 1.788-1.643s1.746.71 1.767 1.643c0 .912-.686 1.642-1.788 1.642Zm12.976 10.807h-3.16v-5.088c0-1.277-.458-2.15-1.601-2.15-.873 0-1.393.589-1.622 1.157-.083.202-.104.486-.104.77v5.31H9.57s.042-8.616 0-9.507h3.16v1.346c.42-.648 1.171-1.57 2.849-1.57 2.079 0 3.638 1.359 3.638 4.28v5.452Z" fill="#000"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers -->
+  <section class="careers">
+    <p class="label">Join us on this journey.</p>
+    <blockquote>&ldquo;We are building groundbreaking software for the industry of industries: The chemical sector affects all our daily lives, providing materials used for the clothes we wear to the electronics we use.&rdquo;</blockquote>
+    <a href="#" class="btn-primary">Job openings</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 12.2c0-3.92 0-5.88.763-7.378a7 7 0 0 1 3.06-3.059C6.318 1 8.28 1 12.2 1h9.6c3.92 0 5.88 0 7.378.763a7 7 0 0 1 3.059 3.06C33 6.318 33 8.28 33 12.2v9.6c0 3.92 0 5.88-.763 7.378a7 7 0 0 1-3.06 3.059C27.682 33 25.72 33 21.8 33h-9.6c-3.92 0-5.88 0-7.378-.763a7 7 0 0 1-3.059-3.06C1 27.682 1 25.72 1 21.8v-9.6Z" fill="#fff"/>
+            <path d="M13 26v-8l8 8h-8Zm8-18v8l-8-8h8Z" fill="#000"/>
+            <path d="M21.8.5h-9.623c-1.94 0-3.428 0-4.615.097-1.198.098-2.136.297-2.967.72a7.5 7.5 0 0 0-3.278 3.278c-.423.831-.622 1.769-.72 2.967C.5 8.749.5 10.236.5 12.177v9.646c0 1.94 0 3.428.097 4.615.098 1.199.297 2.136.72 2.967a7.5 7.5 0 0 0 3.278 3.277c.831.424 1.769.623 2.967.721 1.187.097 2.674.097 4.615.097h9.646c1.94 0 3.428 0 4.615-.097 1.199-.098 2.136-.297 2.967-.72a7.5 7.5 0 0 0 3.277-3.278c.424-.831.623-1.768.721-2.967.097-1.187.097-2.674.097-4.615v-9.646c0-1.94 0-3.428-.097-4.615-.098-1.198-.297-2.136-.72-2.967a7.5 7.5 0 0 0-3.278-3.278c-.831-.423-1.768-.622-2.967-.72C25.251.5 23.764.5 21.823.5H21.8Z" stroke="#D5D5DA"/>
+          </svg>
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;">NTRDE</span>
+        </div>
+        <p>We help chemical manufacturers, distributors, and traders to enhance buying &amp; selling chemicals with AI-augmented Decision Intelligence.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/company/ntrde/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://twitter.com/ntrdeio" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="https://www.youtube.com/channel/UCeu4_eWCf-MjSqMb2rLolHA" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-partners">
+      <h5>Partners</h5>
+      <img src="assets/partner-1.png" alt="Partner" loading="lazy">
+      <img src="assets/partner-2.png" alt="Partner" loading="lazy">
+      <img src="assets/partner-3.png" alt="Partner" loading="lazy">
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 NTRDE GmbH. All rights reserved</span>
+      <div>
+        <a href="#">Privacy</a>
+        <a href="#">Legal</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
