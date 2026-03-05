@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tao Behrendt — CV</title>
+  <meta name="description" content="Tao Behrendt — Sales Strategy & Operations · Enterprise Software · Chemical Industry Vertical">
+  <meta property="og:title" content="Tao Behrendt — CV">
+  <meta property="og:description" content="Sales Strategy & Operations · Enterprise Software · Chemical Industry">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://behhold.de/cv">
+  <link rel="canonical" href="https://behhold.de/cv">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 16px;
+    }
+
+    body {
+      background: #f9f8f3;
+      color: #021f3d;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+    }
+
+    /* ── Header ── */
+    .header {
+      margin-bottom: 2.5rem;
+    }
+
+    .name {
+      font-size: 2.25rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+    }
+
+    .tagline {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #7e8c98;
+      margin-top: 0.5rem;
+    }
+
+    .contact {
+      font-size: 0.8rem;
+      color: #7e8c98;
+      margin-top: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .contact a {
+      color: #7e8c98;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact a:hover {
+      color: #021f3d;
+    }
+
+    .contact .sep {
+      margin: 0 0.4rem;
+      color: #c8c7c2;
+    }
+
+    /* ── Sections ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #e8e7e2;
+      margin: 2rem 0;
+    }
+
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #7e8c98;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Summary ── */
+    .summary-text {
+      font-size: 0.925rem;
+      line-height: 1.65;
+      color: #021f3d;
+      margin-bottom: 1.25rem;
+    }
+
+    .summary-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary-bullets li {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #3a4a58;
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .summary-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #c8c7c2;
+    }
+
+    .summary-bullets strong {
+      color: #021f3d;
+      font-weight: 500;
+    }
+
+    /* ── Experience ── */
+    .role {
+      margin-bottom: 2rem;
+    }
+
+    .role-header {
+      margin-bottom: 0.75rem;
+    }
+
+    .role-company {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .role-location {
+      font-size: 0.8rem;
+      color: #7e8c98;
+      font-weight: 400;
+    }
+
+    .role-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #3a4a58;
+    }
+
+    .role-acquired {
+      font-size: 0.8rem;
+      font-weight: 400;
+      font-style: italic;
+      color: #7e8c98;
+    }
+
+    .role-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #3a4a58;
+      margin-bottom: 0.75rem;
+    }
+
+    .role-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .role-bullets li {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #3a4a58;
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .role-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #c8c7c2;
+    }
+
+    .role-bullets strong {
+      color: #021f3d;
+      font-weight: 500;
+    }
+
+    /* ── Earlier Experience (compact) ── */
+    .earlier-role {
+      margin-bottom: 1rem;
+    }
+
+    .earlier-role-header {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #021f3d;
+    }
+
+    .earlier-role-header .time {
+      font-weight: 400;
+      color: #7e8c98;
+    }
+
+    .earlier-role-desc {
+      font-size: 0.825rem;
+      line-height: 1.55;
+      color: #7e8c98;
+      margin-top: 0.15rem;
+    }
+
+    /* ── Education & Languages ── */
+    .edu-item {
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .edu-detail {
+      font-size: 0.825rem;
+      color: #7e8c98;
+    }
+
+    .languages {
+      font-size: 0.875rem;
+      color: #3a4a58;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e8e7e2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #7e8c98;
+    }
+
+    .footer a {
+      color: #7e8c98;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: #021f3d;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        padding: 0;
+        max-width: none;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .divider {
+        background: #ddd;
+      }
+
+      .role, .earlier-role {
+        break-inside: avoid;
+      }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page {
+        padding: 2rem 1.25rem 3rem;
+      }
+
+      .name {
+        font-size: 1.75rem;
+      }
+
+      .contact .sep {
+        display: none;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name">Tao Behrendt</h1>
+      <p class="tagline">Sales Strategy &amp; Operations · Enterprise Software · Chemical Industry Vertical</p>
+      <p class="contact">
+        Düsseldorf, Germany<span class="sep">·</span>
+        <a href="mailto:tao.behrendt@gmail.com">tao.behrendt@gmail.com</a><span class="sep">·</span>
+        <a href="https://linkedin.com/in/tao-behrendt" target="_blank" rel="noopener">linkedin.com/in/tao-behrendt</a>
+      </p>
+    </header>
+
+    <!-- Professional Summary -->
+    <div class="divider"></div>
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">Sales strategy and operations leader with 10+ years across enterprise software, B2B SaaS, and strategic operations — combining deep vertical expertise in the European chemical industry with hands-on experience building reliable, human-verified AI systems on the Claude API.</p>
+      <ul class="summary-bullets">
+        <li><strong>Chemical Industry Vertical:</strong> Four consecutive years from co-founding a vertical SaaS company (NTRDE, acquired by Knowde) → leading European enterprise deployments (Knowde) → building an AI data platform on Claude (Solvate).</li>
+        <li><strong>Enterprise AI Deployment:</strong> Deployed AI tools for organizations with 500+ commercial employees, connected platforms to SAP S/4HANA during active migrations, and coordinated legal, IT, and commercial stakeholders across multi-month rollouts.</li>
+        <li><strong>GTM Execution:</strong> Designed industry-specific value propositions, sales playbooks, and pricing models from scratch. Closed Biesterfeld, Baerlocher, and Stern-Wywiol; managed Nordmann, 2M Group, and Treatt. Led expansion across DACH, Benelux, and Switzerland.</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <div class="divider"></div>
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <!-- Solvate -->
+      <div class="role">
+        <div class="role-header">
+          <div class="role-company">behHold UG (Solvate) <span class="role-location">· Düsseldorf, Germany</span></div>
+          <div class="role-title">Founder &amp; CEO · Feb 2026 – Present</div>
+        </div>
+        <p class="role-desc">Building an AI platform on the Claude API that converts unstructured chemical documents (SDS, TDS, certificates) into structured, quality-scored records — solving the #1 data bottleneck in chemical distribution.</p>
+        <ul class="role-bullets">
+          <li><strong>AI Architecture:</strong> Designed and built multi-agent extraction pipeline (classify → extract → audit → merge) where AI agents validate each other's output before data reaches the customer — demonstrating enterprise-grade LLM deployment for regulated industries.</li>
+          <li><strong>Enterprise Pilot:</strong> In advanced discussions with 2M Group (€400M+ specialty chemicals distributor) on a structured pilot for 600+ chemical products — defining pricing model, success metrics, and expansion strategy.</li>
+          <li><strong>Industry Validation:</strong> Conducted discovery with decision-makers across chemical distribution (product management, regulatory, operations) to map data workflows and identify highest-ROI applications.</li>
+        </ul>
+      </div>
+
+      <!-- Knowde -->
+      <div class="role">
+        <div class="role-header">
+          <div class="role-company">Knowde <span class="role-location">· Düsseldorf (Remote), Germany</span></div>
+          <div class="role-title">Director of Deployment — Europe · Jan 2025 – Jan 2026</div>
+        </div>
+        <p class="role-desc">Led enterprise go-to-market execution for AI-powered chemical industry platform across DACH and European markets. Managed full customer lifecycle from sales engagement through deployment, adoption, and expansion.</p>
+        <ul class="role-bullets">
+          <li><strong>Enterprise Deployments:</strong> Managed rollouts processing 40,000+ technical documents covering 15,000+ products from 1,000+ suppliers — building phased implementation roadmaps from complex customer requirements.</li>
+          <li><strong>C-Suite Relationships:</strong> Owned strategic customer relationships for organizations with 500+ commercial employees, including Nordmann, 2M Group, and Treatt. Managed enterprise account portfolio across DACH and UK.</li>
+          <li><strong>AI + SAP Integration:</strong> Deployed AI tools for enterprise sales teams while connecting platform to SAP S/4HANA systems during active migrations — coordinating legal, IT, and commercial stakeholders across multi-month deployment cycles.</li>
+          <li><strong>Sales Operations:</strong> Managed pipeline and customer data in Salesforce and Vitally. Built deployment playbooks standardizing customer onboarding (victory models) across European accounts.</li>
+        </ul>
+      </div>
+
+      <!-- NTRDE -->
+      <div class="role">
+        <div class="role-header">
+          <div class="role-company">NTRDE <span class="role-location">· Düsseldorf &amp; Hamburg, Germany</span> <span class="role-acquired">(Acquired by Knowde)</span></div>
+          <div class="role-title">Co-Founder &amp; Managing Director · Mar 2022 – Dec 2024</div>
+        </div>
+        <p class="role-desc">Built vertical SaaS company for the chemical industry from concept to revenue. Full P&amp;L, GTM, and product responsibility. Led to strategic acquisition by Knowde.</p>
+        <ul class="role-bullets">
+          <li><strong>Industry GTM from Zero:</strong> Identified underserved market in chemical trade data, developed vertical-specific value propositions, and built sales playbook targeting mid-market distributors and manufacturers.</li>
+          <li><strong>Enterprise Sales:</strong> Closed Biesterfeld, Baerlocher, and Stern-Wywiol through consultative, multi-stakeholder sales cycles. Scaled to €63K in revenue.</li>
+          <li><strong>P&amp;L &amp; Finance:</strong> Full commercial ownership — managed budget, forecasting, and unit economics across a 3-year build phase. Partnered with investors on financial reporting and milestone tracking.</li>
+          <li><strong>Product-Led Growth:</strong> Built three SaaS modules (trade data analytics, price benchmarking, market intelligence) — iterating based on structured customer feedback.</li>
+          <li><strong>Funding &amp; Exit:</strong> Raised €490K (Business Angels + German government R&amp;D funding). Selected for XPRENEURS Incubator (UnternehmerTUM). Led to strategic acquisition by Knowde.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Earlier Experience -->
+    <div class="divider"></div>
+    <section>
+      <h2 class="section-title">Earlier Experience</h2>
+
+      <div class="earlier-role">
+        <div class="earlier-role-header">Bridgemaker · Senior Venture Architect <span class="time">· Nov 2021 – Feb 2022</span></div>
+        <p class="earlier-role-desc">Validated new mobility business models for corporate partners (Baloise Insurance), bridging corporate innovation with startup execution methodology.</p>
+      </div>
+
+      <div class="earlier-role">
+        <div class="earlier-role-header">Parental Leave <span class="time">· Mar 2021 – Oct 2021</span></div>
+      </div>
+
+      <div class="earlier-role">
+        <div class="earlier-role-header">Creed Sleep Systems · Advisor <span class="time">· Jul 2020 – Mar 2021</span></div>
+        <p class="earlier-role-desc">Operational advisor to the board on purchasing, logistics, and quality management infrastructure.</p>
+      </div>
+
+      <div class="earlier-role">
+        <div class="earlier-role-header">Aifora · Chief of Staff <span class="time">· Apr 2019 – Sep 2020</span></div>
+        <p class="earlier-role-desc">CEO's strategic partner at AI-powered retail analytics company (acquired by Centric Software). Led OKR implementation across all departments, coordinated cross-functional strategic projects, and built HR infrastructure from zero.</p>
+      </div>
+
+      <div class="earlier-role">
+        <div class="earlier-role-header">cube48 · Head of Strategy <span class="time">· Jun 2018 – Mar 2019</span></div>
+        <p class="earlier-role-desc">Commercial strategy and partnership development for enterprise software company. Positioned offerings against proprietary ERP competitors, designed partnership strategy and negotiated strategic alliances to expand sales channels.</p>
+      </div>
+
+      <div class="earlier-role">
+        <div class="earlier-role-header">muun · Head of Operations <span class="time">· Sep 2016 – Jun 2018</span> <span style="font-weight:400; color:#7e8c98; font-style:italic;">(acquired by Otto Bock)</span></div>
+        <p class="earlier-role-desc">Led operations (supply chain, fulfillment, CS, finance) for D2C company scaling across European markets. Drove 10% margin improvement, built operational infrastructure for Benelux and Switzerland expansion (six-figure revenue), and implemented cloud ERP system.</p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <div class="divider"></div>
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <div class="edu-title">University of Bayreuth · B.Sc. Business Administration · 2011 – 2015</div>
+        <div class="edu-detail">Majors: Corporate finance, accounting, and entrepreneurship.</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-title">Vocational Training: Tax Accountant · 2009 – 2011</div>
+        <div class="edu-detail">Chamber of Tax Advisors examination ("Steuerfachangestellter").</div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <div class="divider"></div>
+    <section>
+      <h2 class="section-title">Languages</h2>
+      <p class="languages">German (Native) · English (C2, Full Professional Proficiency)</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="/">&larr; behhold.de</a>
+      <span>&copy; 2025 Tao Behrendt</span>
+    </footer>
+
+  </main>
+</body>
+</html>
